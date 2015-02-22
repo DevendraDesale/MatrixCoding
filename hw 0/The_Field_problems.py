@@ -2,7 +2,7 @@
 coursera = 1
 # Please fill out this stencil and submit using the provided submission script.
 
-
+import GF2
 
 
 
@@ -186,12 +186,11 @@ def transform(a, b, L):
     >>> transform(3,2,[1,2,3])
     [5, 8, 11]
     '''
-    pass
+    return [a * current + b for current in L]
 
 
 
 ## 11: (Problem 11) GF(2) Arithmetic
-GF2_sum_1 = ... # answer with 0 or 1
-GF2_sum_2 = ...
-GF2_sum_3 = ...
-
+GF2_sum_1 = 1 # answer with 0 or 1
+GF2_sum_2 = 0
+GF2_sum_3 = 0

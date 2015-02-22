@@ -20,8 +20,7 @@ def tuple_sum(A, B):
     >>> tuple_sum([(1,2), (10,20)],[(3,4), (30,40)])
     [(4, 6), (40, 60)]
     '''
-    pass
-
+    return [( x1 + x2, y1 + y2) for _,(x1,y1) in enumerate(A) for __, (x2,y2) in enumerate(B) if _ == __]
 
 
 ## 2: (Problem 0.8.4) Inverse Dictionary
@@ -35,7 +34,7 @@ def inv_dict(d):
     Example:
     >>> inv_dict({'goodbye':  'au revoir', 'thank you': 'merci'}) == {'merci':'thank you', 'au revoir':'goodbye'}
     '''
-    pass
+    return {v:k for (k,v) in d.items()}
 
 
 

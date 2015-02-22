@@ -39,3 +39,6 @@ Thumbs.db
 .Rproj.user/
 .Rproj.user
 `*.tex
+*__pycache__*
+## ignore the repeated file.
+coursera_submit.py

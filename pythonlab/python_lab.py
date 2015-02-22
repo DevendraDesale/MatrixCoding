@@ -127,7 +127,7 @@ odd_num_list_range = {x for x in range(100) if x%2!=0}
 # Instead, it should use zip and range.
 # Note: zip() does not return a list. It returns an 'iterator of tuples'
 L = ['A','B','C','D','E']
-range_and_zip = list(zip(range(5),L))
+range_and_zip = list(zip(range(len(L)),L))
 
 
 

@@ -2,7 +2,7 @@
 coursera = 1
 # Please fill out this stencil and submit using the provided submission script.
 from random import randint
-
+import dictutil
 
 
 
@@ -33,9 +33,19 @@ def makeInverseIndex(strlist):
     >>> makeInverseIndex(['hello world','hello','hello cat','hellolot of cats']) == {'hello': {0, 1, 2}, 'cat': {2}, 'of': {3}, 'world': {0}, 'cats': {3}, 'hellolot': {3}}
     True
     """
-    pass
-
-
+    # moviedict = dictutil.listrange2dict(strlist)
+    moviedict = dictutil.list2dict([i for i in range(len(strlist))],strlist)
+    #index = {k.lower():list(filter(lambda x:x[0].lower() == k.lower(),moviedict))}
+    index = dict()
+    for i,x in enumerate(moviedict):
+        for word in x.split():
+            try:
+                index[word].add(moviedict[x])
+            except:
+                list1 = set()
+                list1.add(moviedict[x])
+                index[word] = list1
+    return index
 
 ## 3: (Task 3) Or Search
 def orSearch(inverseIndex, query):

@@ -1,7 +1,7 @@
 # version code d345910f07ae
 coursera = 1
 # Please fill out this stencil and submit using the provided submission script.
-
+from random import randint
 
 
 
@@ -13,7 +13,8 @@ def movie_review(name):
     Input: the name of a movie
     Output: a string (one of the review options), selected at random using randint
     """
-    return ...
+    movie_options = ["See it!", "A gem!", "Ideological claptrap!"]
+    return movie_options[randint(0,2)]
 
 
 

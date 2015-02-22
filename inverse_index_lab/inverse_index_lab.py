@@ -60,7 +60,7 @@ def orSearch(inverseIndex, query):
     >>> orSearch(idx, ['Johann', 'Carl'])
     {0, 2, 3, 4, 5}
     """
-    pass
+    return {indexes for word in query for indexes in inverseIndex[word]}
 
 
 
@@ -77,5 +77,6 @@ def andSearch(inverseIndex, query):
     >>> andSearch(idx, ['Johann', 'Bach'])
     {0, 4}
     """
-    pass
+    indecies = [indecies for word in query for (w, indecies) in inverseIndex.items() if w == word]
+    return [_ & __ for _ in indecies for __ in indecies if _ is not __][-1]
 
